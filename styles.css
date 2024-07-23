@@ -1,0 +1,59 @@
+body {
+    color: #222;
+    background: #fff;
+    transition: background-color 0.5s, color 0.5s;
+}
+
+a {
+    color: #0011ff;
+}
+
+body.light {
+    color: #000000;
+    background: #ffffff;
+}
+
+body.dark {
+    color: #ffffff;
+    background-color: black;
+}
+
+.toggle-container {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.toggle-checkbox {
+    display: none;
+}
+
+.toggle-label {
+    position: relative;
+    width: 60px;
+    height: 30px;
+    background-color: #ccc;
+    border-radius: 30px;
+    cursor: pointer;
+    margin-right: 10px;
+    transition: background-color 0.5s;
+}
+
+.toggle-label .toggle-button {
+    position: absolute;
+    top: 3px;
+    left: 3px;
+    width: 24px;
+    height: 24px;
+    background-color: #fff;
+    border-radius: 50%;
+    transition: transform 0.5s;
+}
+
+.toggle-checkbox:checked + .toggle-label {
+    background-color: #4CAF50;
+}
+
+.toggle-checkbox:checked + .toggle-label .toggle-button {
+    transform: translateX(30px);
+}
